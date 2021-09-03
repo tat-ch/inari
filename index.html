@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--стили сайта-->
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>INARI</title>
+    <link rel="shortcut icon" href="images/interface/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!--всплывающее окно-->
+
+    <div id="confirm-window" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+
+
+        <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+            <div class="modal-content col-lg-8 col-xl-8 col-md-12 col-sm-12 col-xs-12">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="images/interface/logo-r.png" aria-hidden="true"></img>
+                </button>
+                <div class="modal-body d-flex">
+                    <div class="slider">
+                        <div id="product-photos" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="images/products/mashed_potatoes.png" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="images/products/mashed_potatoes.png" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="images/products/mashed_potatoes.png">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#product-photos" data-slide="prev" role="button">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#product-photos" data-slide="next" role="button">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="product-modal-description">
+                        <div class="modal-header">
+                            <div class="modal_headline">
+                                <h5 class="modal-title" id="exampleModalLabel">WOK</h5>
+                                <button class="modal-popper_button" type="button"><img src="images/interface/info-1.svg"
+                                        alt="информация" class="modal-popper_icon"></button>
+                            </div>
+                            <div class="modal-popper">
+                                <table class="modal-popper_table">
+                                    <tr>
+                                        <th colspan="2">Пищевая ценность на 100 г</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Энерг. ценность</td>
+                                        <td> 266,6 ккал</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Белки</td>
+                                        <td>9,3 г</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Жиры</td>
+                                        <td>9,8 г</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Углеводы</td>
+                                        <td>33,5 г</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вес</td>
+                                        <td> 350 г</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Диаметр</td>
+                                        <td>25 см</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <span class="product-modal-short-descr">25 см, традиционное тесто, 350 г</span>
+                        </div>
+                        <p class="product-modal-description_text">Описание данного восхитительного
+                            продукта( граммовка и что-то еще)
+                            Описание данного восхитительного
+                            продукта( граммовка и что-то еще)
+                            Описание данного восхитительного
+                            продукта( граммовка и что-то еще)
+                            Описание данного восхитительного
+                            продукта( граммовка и что-то еще)
+                            Описание данного восхитительного
+                            продукта( граммовка и что-то еще)
+                            Описание данного восхитительного
+                            продукта( граммовка и что-то еще)
+                            Оп</p>
+                        <button type="button" class="add-to-cart btn">Добавить в корзину</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="wraper">
+            <div class="header_container">
+                <div class="logo">
+                    <a href="#" class="logo_link">
+                        <img src="images/interface/logo-r.png" alt="Логотип" class="logo_img">
+                    </a>
+                </div>
+                <div class="service-info">
+                    <a href="tel:+79990000000" class="service_phone-number">+7 999 000 00 00</a>
+                    <span class="service-caution"><img src="images/interface/caution-icon.png" alt=""
+                            class="service-caution_icon">Мы работаем только по Гагаринскому району</span>
+                </div>
+                <div class="timetable">
+                    <span class="timetable_time">08:00 - 23:00</span>
+                    <span class="timetable_name"> <img src="images/interface/time-icon.svg" class="timetable_icon"
+                            alt=""> Время работы</span>
+                </div>
+                <div class="instagram">
+                    <a class="instagram_link" href="#">
+                        <img src="images/interface/instagram_2.svg" alt="Инстаграм" class="instagram_icon">
+                    </a>
+                </div>
+                <div class="cabinet">
+                    <button type="button" class="cabinet_login-btn">Войти</button>
+                    <a href="cart/cart.html" class="cabinet_cart-btn">Корзина</a>
+                    <div class="shop-cart">
+                        <div class="shop-cart_products">
+                            <div class="shop-cart_product">
+                                <h5 class="shop-cart_product-name">Название товара</h5>
+                                <button type="button" class="shop-cart_remove"></button>
+                                <div class="shop-cart_content">
+                                    <img src="images/products/mashed_potatoes.png" alt="" class="shop-cart_img">
+                                    <div class="quantity">
+                                        <button type="button" class="quantity_minus"></button>
+                                        <span class="quantity_number">1</span>
+                                        <button type="button" class="quantity_plus"></button>
+                                    </div>
+                                    <span class="shop-cart_product-cost">1 500 руб.</span>
+                                </div>
+                            </div>
+                            <div class="shop-cart_product">
+                                <h5 class="shop-cart_product-name">Название товара</h5>
+                                <button type="button" class="shop-cart_remove"></button>
+                                <div class="shop-cart_content">
+                                    <img src="images/products/mashed_potatoes.png" alt="" class="shop-cart_img">
+                                    <div class="quantity">
+                                        <button type="button" class="quantity_minus"></button>
+                                        <span class="quantity_number">1</span>
+                                        <button type="button" class="quantity_plus"></button>
+                                    </div>
+                                    <span class="shop-cart_product-cost">1 500 руб.</span>
+                                </div>
+                            </div>
+                            <div class="shop-cart_product">
+                                <h5 class="shop-cart_product-name">Название товара</h5>
+                                <button type="button" class="shop-cart_remove"></button>
+                                <div class="shop-cart_content">
+                                    <img src="images/products/mashed_potatoes.png" alt="" class="shop-cart_img">
+                                    <div class="quantity">
+                                        <button type="button" class="quantity_minus"></button>
+                                        <span class="quantity_number">1</span>
+                                        <button type="button" class="quantity_plus"></button>
+                                    </div>
+                                    <span class="shop-cart_product-cost">1 500 руб.</span>
+                                </div>
+                            </div>
+                            <div class="shop-cart_product">
+                                <h5 class="shop-cart_product-name">Название товара</h5>
+                                <button type="button" class="shop-cart_remove"></button>
+                                <div class="shop-cart_content">
+                                    <img src="images/products/mashed_potatoes.png" alt="" class="shop-cart_img">
+                                    <div class="quantity">
+                                        <button type="button" class="quantity_minus"></button>
+                                        <span class="quantity_number">1</span>
+                                        <button type="button" class="quantity_plus"></button>
+                                    </div>
+                                    <span class="shop-cart_product-cost">1 500 руб.</span>
+                                </div>
+                            </div>
+                            <div class="shop-cart_product">
+                                <h5 class="shop-cart_product-name">Название товара</h5>
+                                <button type="button" class="shop-cart_remove"></button>
+                                <div class="shop-cart_content">
+                                    <img src="images/products/mashed_potatoes.png" alt="" class="shop-cart_img">
+                                    <div class="quantity">
+                                        <button type="button" class="quantity_minus"></button>
+                                        <span class="quantity_number">1</span>
+                                        <button type="button" class="quantity_plus"></button>
+                                    </div>
+                                    <span class="shop-cart_product-cost">1 500 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-cost">
+                            <span class="total-cost_text">Сумма заказа</span>
+                            <span class="total-cost_number">1 500 руб.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar_button">
+                <span class="navbar_decorate"></span>
+            </div>
+            <nav class="navbar">
+
+                <div class="navbar_header">
+                    <div class="logo">
+                        <img src="images/interface/logo-r.png" class="logo_img" alt="">
+                    </div>
+                    <div class="service-info">
+                        <a href="tel:+79990000000" class="service_phone-number">+7 999 000 00 00</a>
+                        <span class="service-caution"><img src="images/interface/caution-icon.png" alt=""
+                                class="service-caution_icon">Мы работаем только по Гагаринскому району</span>
+                    </div>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#gunkans" class="nav-link selected">Гунканы</a></li>
+                    <li class="nav-item"><a href="#pizzas" class="nav-link">Пицца</a></li>
+                    <li class="nav-item"><a href="#wok" class="nav-link">WOK</a></li>
+                    <li class="nav-item"><a href="#chahan" class="nav-link">Тяхан</a></li>
+                    <li class="nav-item"><a href="#pastes" class="nav-link">Пасты</a></li>
+                    <li class="nav-item"><a href="cart/cart.html" class="nav-link adaptive_nav-link">Корзина</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link adaptive_nav-link">Войти</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <main>
+        <!--слайдер баннеров-->
+        <div class="banners">
+            <div class="banners_slider">
+                <div class="banner">
+                    <img class="banner_img" src="images/slide.png" alt="баннер">
+                </div>
+                <div class="banner">
+                    <img class="banner_img" src="images/slide2.png" alt="баннер">
+                </div>
+                <div class="banner">
+                    <img class="banner_img" src="images/slide3.png" alt="баннер">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wraper">
+            <div class="advantage container-fluid d-flex justify-content-between">
+                <div class="advantage_card">
+                    <img src="images/interface/price.png" alt="" class="advantage_img">
+                    <div class="advantage_description">
+                        <h5 class="advantage_title">Отличная цена!</h5>
+                        <p class="advantage_text">Мы не жадничаем и держим цены доступными</p>
+                    </div>
+                </div>
+                <div class="advantage_card">
+                    <img src="images/interface/gifts.png" alt="" class="advantage_img">
+                    <div class="advantage_description">
+                        <h5 class="advantage_title">Подарки для постоянных клиентов!</h5>
+                        <p class="advantage_text">Мы умеем быть благодарными:) своих не забываем!</p>
+                    </div>
+                </div>
+                <div class="advantage_card">
+                    <img src="images/interface/ingredients.png" alt="" class="advantage_img">
+                    <div class="advantage_description">
+                        <h5 class="advantage_title">Наисвежайшие ингредиенты!</h5>
+                        <p class="advantage_text">Мы умеем быть благодарными:) своих не забываем!</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="category">
+            <a name="gunkans"></a>
+            <div class="wraper">
+                <div class="category_headline">
+                    <h2 class="category_name">Гунканы</h2>
+                    <img src="images/interface/ico-gunkan.svg" alt="" class="category_icon">
+                </div>
+                <div class="row">
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/gunkans/gunkan-crab.png" alt="Гункан с крабом"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Гункан с крабом</h5>
+                                    <p class="card-text">Рис, водоросли нори, крабовое мясо.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">40 г</span>
+                                            <span class="card_price">90 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/gunkans/gunkan-salmon.png" alt="Гункан с лососем"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Гункан с лососем</h5>
+                                    <p class="card-text">Рис, водоросли нори, лосось.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">40 г</span>
+                                            <span class="card_price">90 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/gunkans/gunkan-tuna.png" alt="Гункан с тунцом"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Гункан с тунцом</h5>
+                                    <p class="card-text">Рис, водоросли нори, тунец.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">40 г</span>
+                                            <span class="card_price">90 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/gunkans/gunkan-chicken.png" alt="Гункан с копчёной курицей"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Гункан с копчёной курицей</h5>
+                                    <p class="card-text">Рис, водоросли нори, копчёная курица.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">90 г</span>
+                                            <span class="card_price">90 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/gunkans/gunkan-baked.png" alt="Запечённый гункан с крабом"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Запечённый гункан с крабом</h5>
+                                    <p class="card-text">Рис, водоросли нори, крабовое мясо, сырная шапочка, соус Унаги.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">50 г</span>
+                                            <span class="card_price">100 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/gunkans/gunkan-baked.png" alt="Запечённый гункан с лососем"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Запечённый гункан с лососем</h5>
+                                    <p class="card-text">Рис, водоросли нори, лосось, сырная шапочка, соус Унаги.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">50 г</span>
+                                            <span class="card_price">100 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/gunkans/gunkan-baked.png" alt="Запечённый гункан с тунцом"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Запечённый гункан с тунцом</h5>
+                                    <p class="card-text">Рис, водоросли нори, тунец, сырная шапочка, соус Унаги
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">50 г</span>
+                                            <span class="card_price">100 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/gunkans/gunkan-baked.png" alt="Запечённый гункан с креветками"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Запечённый гункан с крабом</h5>
+                                    <p class="card-text">Рис, водоросли нори, креветки, сырная шапочка, соус Унаги.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">50 г</span>
+                                            <span class="card_price">100 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/gunkans/gunkan-baked.png" alt="Запечённый гункан с копчёной курицей"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Запечённый гункан с копчёной курицей</h5>
+                                    <p class="card-text">Рис, водоросли нори, копчёная курица, сырная шапочка, соус Унаги.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">50 г</span>
+                                            <span class="card_price">100 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <a name="pizzas"></a>
+            <div class="wraper">
+                <div class="category_headline">
+                    <h2 class="category_name">Пицца</h2>
+                    <img src="images/interface/ico-pizza.png" alt="Пицца" class="category_icon">
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-4-cheeses.png" alt="Пицца Четыре сыра"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Четыре сыра"</h5>
+                                    <p class="card-text">Тесто, соус томатный, сыр гауда, сыр пармезан, сыр рокфорини, сыр моцарелла, базилик.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">641 г</span>
+                                            <span class="card_price">560 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-naples.png" alt="Пицца Неаполь"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Неаполь"</h5>
+                                    <p class="card-text">Тесто, соус фирменный, креветки, лосось, сыр моцарелла, орегано.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">634 г</span>
+                                            <span class="card_price">760 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-chedar.png" alt="Пицца Чеддер"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Чеддер"</h5>
+                                    <p class="card-text">Тесто, соус томатный, копчёная курица, томаты, сыр чеддер, сыр моцарелла, огурцы маринованные, орегано.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">712 г</span>
+                                            <span class="card_price">570 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-carbonara.png" alt="Пицца Карбонара"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Карбонара"</h5>
+                                    <p class="card-text">Тесто, соус фирменный, бекон, сыр пармезан, сыр моцарелла, базилик.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">713 г</span>
+                                            <span class="card_price">560 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-verona.png" alt="Пицца Верона"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Верона"</h5>
+                                    <p class="card-text">Тесто, соус фирменный, колбаса копчёная, ветчина, шампиньоны, перец болгарский, сыр моцарелла, орегано.
+
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">764 г</span>
+                                            <span class="card_price">560 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-carbonara.png" alt="Пицца Маргарита"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Маргарита"</h5>
+                                    <p class="card-text">Тесто, соус томатный, томаты, сыр моцарелла, орегано.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">673 г</span>
+                                            <span class="card_price">490 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-pepperoni.png" alt="Пицца Пепперони"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Пепперони"</h5>
+                                    <p class="card-text">Тесто, соус томатный, колбаски пепперони, сыр моцарелла, базилик.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">600 г</span>
+                                            <span class="card_price">520 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-milan.png" alt="Пицца Милан"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Милан"</h5>
+                                    <p class="card-text">Тесто, соус фирменный, ветчина, шампиньоны, томаты, бекон, огурцы маринованные, перец болгарский, сыр моцарелла, микс салатов орегано.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">807 г</span>
+                                            <span class="card_price">580 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-picanto.png" alt="Пицца Пиканто"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Пиканто"</h5>
+                                    <p class="card-text">Тесто, соус томатный, креветки, томаты, сыр моцарелла, соус "Сладкий чили", орегано.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">634 г</span>
+                                            <span class="card_price">640 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-hawaiian.png" alt="Пицца Гавайская"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Гавайская"</h5>
+                                    <p class="card-text">Тесто, соус томатный, ананасы, бекон, сыр моцарелла, орегано.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">714 г</span>
+                                            <span class="card_price">540 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-children.png" alt="Пицца Детская"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Детская"</h5>
+                                    <p class="card-text">Тесто, соус фирменный, сосиски, сыр гауда, сыр моцарелла, орегано.                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">653 г</span>
+                                            <span class="card_price">440 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-bavarian.png" alt="Пицца Баварская"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Баварская"</h5>
+                                    <p class="card-text">Тесто, соус томатный, колбаски охотничьи, ветчина, бекон, сыр моцарелла, орегано.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">674 г</span>
+                                            <span class="card_price">570 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pizzas/pizza-vicenza.png" alt="Пицца Виченца"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Пицца "Виченца"</h5>
+                                    <p class="card-text">Тесто, соус фирменный, ветчина, шампиньоны, моцарелла, маслины, базилик.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">700 г</span>
+                                            <span class="card_price">590 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="category">
+            <a name="wok"></a>
+            <div class="wraper">
+                <div class="category_headline">
+                    <h2 class="category_name">WOK</h2>
+                    <img src="images/interface/ico-noodles.svg" alt="" class="category_icon">
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/wok/soba-vegetables.png" alt="Соба с овощами и имбирём в соусе Терияки"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Соба с овощами и имбирём в соусе Терияки</h5>
+                                    <p class="card-text">Соба отварная, помидоры, перец болгарский, стручковая фасоль, морковь, имбирь, кунжут белый, соус Терияки.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">260 г</span>
+                                            <span class="card_price">240 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/wok/soba-pork.png" alt="Соба со свининой в соусе Терияки"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Соба со свининой в соусе Терияки</h5>
+                                    <p class="card-text">Соба отварная, свинина, перец болгарский, морковь, кунжут белый, соус Терияки.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">260 г</span>
+                                            <span class="card_price">270 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/wok/soba-chicken.png" alt="Соба с курицей в соусе Унаги"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Соба с курицей в соусе Унаги</h5>
+                                    <p class="card-text">Соба отварная, куриное филе, перец болгарский, стручковая фасоль, морковь, кунжут белый, соус Унаги.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">260 г</span>
+                                            <span class="card_price">270 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/wok/harusame-chicken.png" alt="Харусаме с курицей со сливками в соусе Терияки"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Харусаме с курицей со сливками в соусе Терияки</h5>
+                                    <p class="card-text">Лапша хурасаме, куриное филе, перец болгарский, стручковая фасоль, морковь, сливки, кунжут белый, соус Терияки.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">260 г</span>
+                                            <span class="card_price">290 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/wok/udon-chicken.png" alt="Удон с курицей в соусе Терияки"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Удон с курицей в соусе Терияки</h5>
+                                    <p class="card-text">Лапша удон, куриное филе, перец болгарский, стручковая фасоль, морковь, кунжут белый, соус Терияки.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">260 г</span>
+                                            <span class="card_price">280 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/wok/udon-shrimps.png" alt="Удон с креветками в соусе сладкий чили"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Удон с креветками в соусе сладкий чили</h5>
+                                    <p class="card-text">Лапша удон, креветки, перец болгарский, стручковая фасоль, морковь кунжут белый, соус сладкий чили.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">260 г</span>
+                                            <span class="card_price">320 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/wok/udon-pork.png" alt="Удон со свининой в соусе сладкий чили"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Удон со свининой в соусе сладкий чили</h5>
+                                    <p class="card-text">Лапша удон, свинина, перец болгарский, стручковая фасоль, морковь, кунжут белый, соус сладкий чили.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">260 г</span>
+                                            <span class="card_price">280 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <a name="chahan"></a>
+            <div class="wraper">
+                <div class="category_headline">
+                    <h2 class="category_name">Тяхан</h2>
+                    <img src="images/interface/ico-rice.svg" alt="" class="category_icon">
+                </div>
+                <div class="row">
+                    
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/chahan/chahan-chicken.png" alt="Тяхан со свининой в соусе терияки"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Тяхан со свининой в соусе терияки</h5>
+                                    <p class="card-text">Рис отварной, куриное филе, перец болгарский, стручковая фасоль, морковь, кунжут белый, соус Терияки.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">320 г</span>
+                                            <span class="card_price">270 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/chahan/chahan-chicken.png" alt="Тяхан с курицей в соусе терияки"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Тяхан с курицей в соусе терияки</h5>
+                                    <p class="card-text">Рис отварной, куриное филе, перец болгарский, стручковая фасоль, морковь, кунжут белый, соус Терияки.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">320 г</span>
+                                            <span class="card_price">260 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                   
+                </div>
+            </div>
+        </section>
+        <section class="category">
+            <a name="pastes"></a>
+            <div class="wraper">
+                <div class="category_headline">
+                    <h2 class="category_name">Пасты</h2>
+                    <img src="images/interface/ico-pasta.svg" alt="" class="category_icon">
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pastes/pasta-chicken.png" alt="Паста с курицей в соусе сладкий чили"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Паста с курицей в соусе сладкий чили</h5>
+                                    <p class="card-text">Спагетти, сыр Пармезан, бедро куриное, соус сладкий чили.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">290 г</span>
+                                            <span class="card_price">250 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pastes/pasta-salmon.png" alt="Паста с лососем в сливочном соусе"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Паста с лососем в сливочном соусе</h5>
+                                    <p class="card-text">Спагетти, лосось, сливки, сыр Пармезан.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">330 г</span>
+                                            <span class="card_price">330 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card_body">
+                                <img src="images/products/pastes/paste-carbonara.png" alt="Паста с курицей в соусе сладкий чили"
+                                    class="product_photo img-fluid">
+
+                                <div class="card_description">
+                                    <h5 class="card_title">Паста Карбонара</h5>
+                                    <p class="card-text">Спагетти, бекон, сливки, сыр Пармезан.
+                                    </p>
+                                    <div class="card_footer">
+                                        <div class="card_info">
+                                            <span class="card_weight">290 г</span>
+                                            <span class="card_price">290 руб.</span>
+                                        </div>
+                                        <button class="card_add-btn" type="button" data-toggle="modal"
+                                            data-target="#confirm-window">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="order">
+            <div class="wraper">
+                <div class="order_top">
+                    <h2 class="order_headline">Оплата и доставка</h2>
+                    <img src="images/interface/caution-icon.png" alt="" class="order_caution-icon">
+                </div>
+                <div class="order_container">
+                    <ul class="buy-information">
+                        <li class="buy-information_item">
+                            <img src="images/interface/delivery.svg" alt="" class="buy-information_img">
+                            <p class="buy-information_text">Доставка одиночных заказов доступна не во всех районах
+                                Москвы
+                            </p>
+                            <p class="buy-information_text">Доставка рационов доступна во всех районах Москвы</p>
+                        </li>
+                        <li class="buy-information_item">
+                            <img src="images/interface/cashless.svg" alt="" class="buy-information_img">
+                            <p class="buy-information_text">Принимаем наличные или перевод на карту!</p>
+                        </li>
+                        <li class="buy-information_item">
+                            <img src="images/interface/cash.svg" alt="" class="buy-information_img">
+                            <p class="buy-information_text">Минимальная сумма заказа - <span class="text-danger">800
+                                    руб.</span></p>
+                        </li>
+                    </ul>
+
+                    <form method="get" action="" class="check-delivery-zone">
+                        <h5 class="check-delivery-zone_headline">Проверить зону доставки</h5>
+                        <div class="check-delivery-zone_container">
+                            <input type="text" placeholder="Введите метро" name="metro"
+                                class="check-delivery-zone_input">
+                            <input type="text" placeholder="Введите адрес" name="addres"
+                                class="check-delivery-zone_input">
+                            <button class="check-delivery-zone_btn" type="submit">Проверить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="wraper">
+            <div class="contact-information">
+                <p class="contact-information_addres">Садовая 245</p>
+                <div class="contact-information_telephone">
+                    <a class="contact-information_number" href="tel:+79990000000">+7 999 000 00 00</a>
+                    <span class="contact-information_attention">Звонок за ваш счёт</span>
+                </div>
+            </div>
+            <hr class="footer_hr">
+            <div class="footer_bottom">
+                <div class="law_info">
+                    <span class="law_copyright">INARI &copy; 2021</span>
+                    <span class="law_ogrn">ОГРН 99999999999 </span>
+                    <span class="law_inn">ИНН 500505055005</span>
+                </div>
+                <div class="footer_nav">
+                    <nav class="footer_navbar">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="#gunkans" class="footer_nav-link active-link">Гунканы</a></li>
+                            <li class="nav-item"><a href="#pizzas" class="footer_nav-link">Пицца</a></li>
+                            <li class="nav-item"><a href="#wok" class="footer_nav-link">WOK</a></li>
+                            <li class="nav-item"><a href="#chahan" class="footer_nav-link">Тяхан</a></li>
+                            <li class="nav-item"><a href="#pastes" class="footer_nav-link">Пасты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="#" class="footer_instagram"><img src="images/interface/instagram-white.svg" alt=""
+                        class="footer_instagram-ico"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+    <script src="script.js"></script>
+    <script src="slick.min.js"></script>
+
+</body>
+
+</html>
