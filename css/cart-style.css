@@ -1,0 +1,788 @@
+@charset "UTF-8";
+* {
+  font-family: "Montserrat", sans-serif; }
+
+@font-face {
+  font-family: VAG Rounded Std;
+  src: url(../fonts/VAG-Rounded-Std-Light.ttf);
+  font-weight: normal; }
+@font-face {
+  font-family: VAG Rounded Std;
+  src: url(../fonts/VAGRoundedStd-Bold.otf);
+  font-weight: bold; }
+@font-face {
+  font-family: a_FuturaRound;
+  src: url(../fonts/a_futuraround_[allfont.ru].ttf); }
+.wraper {
+  max-width: 1110px;
+  margin: 0 auto; }
+
+/* модальное окно */
+#confirm-window {
+  max-width: 1110px;
+  margin: 0 auto; }
+
+.close {
+  width: 22px;
+  height: 22px;
+  left: 734px;
+  top: 2px;
+  position: absolute;
+  z-index: 666;
+  opacity: 0.5;
+  transition: all 200ms ease-in-out; }
+  .close:focus {
+    outline: none; }
+  .close:hover {
+    opacity: 1;
+    transform: scale(1.2); }
+  .close:active {
+    transform: scale(0.7); }
+  .close img {
+    display: block;
+    width: 100%; }
+
+.modal-dialog {
+  min-width: fit-content; }
+.modal-content {
+  margin: auto auto;
+  border-radius: 22px; }
+.modal-body {
+  display: flex;
+  padding: 30px 41px 30px; }
+.modal-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 32px; }
+.modal_form div {
+  padding: 0 4px; }
+.modal_form input,
+.modal_form textarea {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 13px;
+  padding-left: 13px;
+  color: #8b8b8b; }
+.modal_form input {
+  height: 33px;
+  padding-left: 13px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px; }
+.modal_form_btn {
+  background-color: #ff6b00;
+  border: none;
+  transition: all 200ms ease-in-out;
+  border-radius: 7px;
+  color: #ffffff;
+  padding: 12px 43px 12px; }
+  .modal_form_btn:hover {
+    background-color: #d90034; }
+.modal-logo {
+  margin-left: 63px; }
+
+.check-delivery-zone {
+  position: relative; }
+  .check-delivery-zone_form {
+    display: none;
+    margin-left: 22%;
+    background-image: url(../images/interface/check-delivery-form.svg);
+    position: absolute;
+    padding: 40px 31px 17px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0; }
+  .check-delivery-zone_input {
+    width: 223px;
+    height: 27px;
+    margin: 0 auto 15px;
+    border-radius: 7px;
+    border: 1px solid #818181;
+    padding: 7px 14px 7px;
+    font-family: "a_FuturaRound", arial;
+    display: block; }
+  .check-delivery-zone_btn {
+    margin: 0px auto 0;
+    width: 124px;
+    height: 26px;
+    background-color: #ff6b00;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 200ms ease-in-out;
+    border-radius: 7px;
+    color: #ffffff;
+    font-family: "a_FuturaRound", arial;
+    display: block; }
+    .check-delivery-zone_btn:hover {
+      background-color: #d90034; }
+    .check-delivery-zone_btn:active {
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); }
+
+/* шапка */
+.header {
+  padding: 14px 0; }
+  .header_container {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #8c8c8c;
+    padding-bottom: 24px; }
+  .header .logo {
+    width: 95px; }
+
+/* блок с телефоном и предупреждением о районе работы */
+.service_phone-number {
+  color: #000000;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  font-family: VAG rounded Std;
+  margin-bottom: 8px; }
+  .service_phone-number:hover {
+    text-decoration: none;
+    color: inherit; }
+.service-info {
+  margin-left: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+.service-caution {
+  font-family: "a_FuturaRound", arial;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: #858585; }
+  .service-caution_icon {
+    width: 20px;
+    margin-right: 9px; }
+
+/* блок с расписанием */
+.timetable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 79px; }
+  .timetable_time {
+    font-family: VAG rounded std;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px; }
+  .timetable_name {
+    font-family: "a_FuturaRound", arial;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #858585; }
+  .timetable_icon {
+    width: 20px;
+    margin-right: 9px !important; }
+
+/* навигационное меню */
+.navbar_header,
+.navbar .nav {
+  display: none; }
+
+.main-wraper {
+  max-width: 760px;
+  margin: 5px auto;
+  min-height: calc(101vh - 300px); }
+
+/* корзина */
+.cart_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px; }
+.cart_delivery-area-btn {
+  border: 1px solid #000000;
+  border-radius: 7px;
+  background: none;
+  font-family: "a_FuturaRound", arial;
+  padding: 9px 11px;
+  cursor: pointer;
+  transition: all 0.15s ease 0s; }
+  .cart_delivery-area-btn:hover {
+    text-decoration: none;
+    color: #000000;
+    color: #ffffff;
+    border-color: #ff6900;
+    background-color: #ff6b00; }
+.cart_headline {
+  font-family: "a_FuturaRound", arial;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 34px; }
+.cart_product {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000; }
+  .cart_product:nth-child(even) {
+    border: none; }
+.cart_exit {
+  border: 1px solid #000000;
+  border-radius: 7px;
+  padding: 9px 37px;
+  color: #000000;
+  transition: all 0.15s ease 0s;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "a_FuturaRound", arial;
+  width: 199px;
+  height: 36px; }
+  .cart_exit:hover {
+    text-decoration: none;
+    color: #000000;
+    color: #ffffff;
+    border-color: #ff6900;
+    background-color: #ff6b00; }
+.cart_product-main-content {
+  display: flex;
+  margin-top: 40px; }
+.cart_products-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 79px; }
+
+/* описание товаров */
+.description {
+  padding: 4px 0 4px;
+  max-width: 347px;
+  display: flex; }
+  .description_container {
+    margin-left: 27px; }
+  .description_img {
+    width: 103px; }
+  .description_name {
+    font-family: "a_FuturaRound", arial;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 38px; }
+  .description_text {
+    font-family: "a_FuturaRound", arial;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 36px;
+    color: #6a6a6a; }
+
+/* редактирование количества */
+.quantity {
+  max-width: max-content; }
+  .quantity_btn-minus {
+    background: url(../images/interface/minus.svg);
+    margin-right: 22px; }
+  .quantity_btn-plus {
+    background: url(../images/interface/plus.svg);
+    margin-left: 18px; }
+  .quantity_result {
+    vertical-align: 3px;
+    margin-bottom: 5px; }
+
+@-moz-document url-prefix() {
+  .quantity_result {
+    vertical-align: -20%; } }
+.quantity_btn-plus,
+.quantity_btn-minus {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #ff6b00;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out; }
+  .quantity_btn-plus:hover,
+  .quantity_btn-minus:hover {
+    border-color: #ed6100;
+    transform: scale(1.2); }
+  .quantity_btn-plus:active, .quantity_btn-plus:focus,
+  .quantity_btn-minus:active,
+  .quantity_btn-minus:focus {
+    outline: none;
+    box-shadow: 0 0 3px #000000; }
+  .quantity_btn-plus:active,
+  .quantity_btn-minus:active {
+    transform: scale(0.7); }
+
+/* карточка товара в корзине */
+.cart-product_cost {
+  vertical-align: 20%;
+  margin: 0 36px 0 58px; }
+.cart-product_remove-btn {
+  border: none;
+  background: url(../images/interface/remove.svg);
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out; }
+  .cart-product_remove-btn:hover {
+    transform: scale(1.2); }
+  .cart-product_remove-btn:focus, .cart-product_remove-btn:active {
+    outline: none; }
+  .cart-product_remove-btn:active {
+    transform: scale(0.7); }
+
+/* блок с кнопкой покупки и суммарной ценой */
+.buy-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+  .buy-block_total-cost, .buy-block_sum {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "a_FuturaRound", arial; }
+  .buy-block_sum {
+    color: #ff6b00; }
+  .buy-block_total-cost {
+    margin-right: 20px; }
+  .buy-block_btn {
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: #ff6b00;
+    border-radius: 7px;
+    font-family: "a_FuturaRound", arial;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    padding: 9px 31px;
+    width: 124px;
+    height: 36px;
+    transition: all 200ms ease-in-out; }
+    .buy-block_btn:hover {
+      background-color: #d90034; }
+    .buy-block_btn:active {
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); }
+
+/* футер */
+.footer {
+  background-color: #3c3c3c; }
+  .footer_hr {
+    background-color: #ffffff; }
+
+.contact-information {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 21px;
+  padding-top: 25px;
+  color: #ffffff; }
+  .contact-information_number {
+    color: inherit;
+    font-family: "a_FuturaRound", arial; }
+    .contact-information_number:hover {
+      text-decoration: none;
+      color: inherit; }
+  .contact-information_attention {
+    font-size: 14px;
+    line-height: 17px;
+    display: block;
+    text-align: right;
+    color: #838383;
+    font-family: "a_FuturaRound", arial; }
+
+.footer-bottom {
+  display: flex; }
+
+.law_info {
+  margin-top: 6px;
+  font-family: "a_FuturaRound", arial; }
+.law_copyright {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 9px; }
+
+.footer_nav {
+  margin-left: 5%; }
+  .footer_nav .nav-item {
+    margin-right: 17px; }
+  .footer_nav .nav-link {
+    font-family: "a_FuturaRound", arial;
+    color: #000000;
+    padding: 8px 3px 2px 0; }
+    .footer_nav .nav-link.selected {
+      border-bottom: 1px solid #ff6b00; }
+  .footer_nav-link {
+    font-family: "a_FuturaRound", arial;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #a5a5a5; }
+    .footer_nav-link.active-link {
+      color: #ffffff; }
+    .footer_nav-link:hover {
+      text-decoration: none;
+      color: #ffffff; }
+
+.footer_instagram {
+  margin: 0 0 35px 30%; }
+  .footer_instagram-ico {
+    margin-bottom: 35px; }
+
+/* адаптив */
+@media (max-width: 1110px) {
+  .footer_instagram-ico {
+    margin: 0 0 35px 25%;
+    margin-bottom: 35px; }
+
+  .wraper {
+    padding: 0 15px 0; } }
+@media (max-width: 992px) {
+  body.lock {
+    overflow: hidden; }
+
+  main {
+    margin-top: 70px; }
+
+  .main-wraper {
+    padding: 0 10px 0; }
+
+  #confirm-window {
+    padding: 0; }
+
+  .modal-logo {
+    margin-left: 10px; }
+
+  .close {
+    top: 15px;
+    left: unset;
+    right: 15px;
+    width: 30px;
+    height: 30px; }
+
+  .header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 56; }
+    .header::before {
+      content: "";
+      position: absolute;
+      background-color: #ffffff;
+      box-shadow: 0 0 3px #000000;
+      top: 0;
+      z-index: 56;
+      height: 60px;
+      width: 100%; }
+
+  .header_container {
+    display: none; }
+
+  .navbar_button {
+    position: relative;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 56; }
+    .navbar_button span {
+      background-color: #000000;
+      position: absolute;
+      height: 3px;
+      width: 30px;
+      top: 10px;
+      transition: all 300ms ease; }
+    .navbar_button::before {
+      top: 0;
+      transition: all 300ms ease; }
+    .navbar_button::after {
+      bottom: 0;
+      transition: all 300ms ease; }
+
+  .navbar_button::before,
+  .navbar_button::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #000000;
+    position: absolute; }
+
+  .navbar_button.active_adaptive span {
+    transform: scale(0); }
+
+  .navbar_button.active_adaptive::before {
+    transform: translateY(11px) rotate(45deg); }
+
+  .navbar_button.active_adaptive::after {
+    transform: translateY(-11px) rotate(-45deg); }
+
+  .navbar {
+    position: fixed;
+    z-index: 55;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 35px 15px 0 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    transform: translateY(-100%);
+    transition: 0.5s ease-in; }
+    .navbar_header {
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 56; }
+      .navbar_header .service-info {
+        margin-left: 0; }
+      .navbar_header .service_phone-number {
+        text-align: end; }
+      .navbar_header .logo_img {
+        display: block;
+        width: 100%; }
+    .navbar .nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 30px;
+      padding: 10px;
+      border-bottom: 1px solid #000000;
+      border-top: 1px solid #000000; }
+      .navbar .nav .nav-item {
+        margin-bottom: 10px;
+        border-radius: 7px;
+        padding: 4px 0 4px 15px; }
+        .navbar .nav .nav-item:hover {
+          background-color: #e2e1e1; }
+      .navbar .nav .nav-link {
+        padding: 0;
+        border: none;
+        color: #000000; }
+
+  .check-delivery-zone_form {
+    top: 45px;
+    right: -20px;
+    padding: 10px; }
+
+  .check-delivery-zone {
+    right: 10px; }
+
+  .check-delivery-zone_container {
+    padding: 20px 15px 20px; }
+
+  .navbar.active_adaptive {
+    transform: translateY(0); }
+
+  .check-delivery-zone {
+    margin-left: 0; }
+
+  .footer-bottom {
+    justify-content: space-between; }
+
+  .footer_nav {
+    display: none; } }
+@media (max-width: 700px) {
+  .modal-dialog {
+    margin: 0; }
+
+  .modal-content {
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+
+  .modal_form_btn {
+    padding: 6px 21px; }
+
+  .modal-logo {
+    display: none; }
+
+  .modal_form input,
+  .modal_form textarea {
+    padding-left: 6px;
+    font-size: 11px; }
+
+  .check-delivery-zone_form {
+    background-size: 100% 100%;
+    top: 30px; }
+
+  .check-delivery-zone_input {
+    width: 170px;
+    margin-top: 10px; }
+
+  .cart_product {
+    display: flex;
+    justify-content: space-between; }
+
+  .description {
+    max-width: 347px;
+    display: flex;
+    justify-content: flex-start; }
+    .description_container {
+      margin-left: 27px;
+      margin-top: 28px; }
+    .description_img {
+      width: 103px; }
+    .description_name {
+      font-size: 18px;
+      line-height: 22px;
+      margin: 0; }
+    .description_text {
+      font-size: 10px;
+      line-height: 12px;
+      margin: 0; }
+
+  .quantity {
+    max-width: max-content;
+    margin-right: 55px;
+    margin-top: 0px; }
+    .quantity_btn-minus {
+      margin-right: 11px; }
+    .quantity_btn-plus {
+      margin-left: 9px; }
+    .quantity_result {
+      vertical-align: 20%;
+      margin-bottom: 5px; }
+
+  .quantity_btn-plus,
+  .quantity_btn-minus {
+    width: 25px;
+    height: 25px; }
+
+  .cart-product {
+    width: 100%; }
+    .cart-product_cost {
+      vertical-align: 20%;
+      margin-left: 0;
+      margin-top: 0px; }
+    .cart-product_remove-btn {
+      width: 20px;
+      height: 20px;
+      margin-left: 0;
+      margin-top: 0px; }
+
+  .buy-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    .buy-block_total-cost, .buy-block_sum {
+      font-size: 18px;
+      line-height: 22px; }
+    .buy-block_total-cost {
+      margin-right: 20px; }
+    .buy-block_btn {
+      margin-top: 30px;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 9px 31px;
+      width: 124px;
+      height: 36px; }
+
+  .contact-information_telephone {
+    font-size: 18px; } }
+@media (max-width: 520px) {
+  .description {
+    max-width: 347px;
+    display: flex;
+    justify-content: flex-start; }
+    .description_container {
+      margin-left: 10px;
+      margin-top: 28px; }
+    .description_img {
+      width: 103px;
+      float: none; }
+    .description_name {
+      font-size: 14px;
+      line-height: 22px;
+      margin: 0; }
+    .description_text {
+      font-size: 10px;
+      line-height: 12px;
+      margin: 0; }
+
+  .service_phone-number {
+    font-size: 15px; }
+
+  .service-caution {
+    font-size: 9px; }
+    .service-caution_icon {
+      width: 10px; }
+
+  .navbar_header .logo {
+    width: 80px; }
+
+  .contact-information {
+    padding: 12px 0px 12px !important;
+    margin-bottom: 0; }
+
+  .footer_instagram {
+    margin-bottom: 0; }
+
+  .quantity {
+    margin-right: 40px; } }
+@media (max-width: 460px) {
+  .cart_headline {
+    font-size: 18px; }
+
+  .cart_delivery-area-btn {
+    font-size: 13px;
+    padding: 2px 4px; }
+
+  .check-delivery-zone_container {
+    margin-top: 10px;
+    padding: 10px; }
+
+  .check-delivery-zone_form {
+    top: 25px;
+    left: -40px;
+    padding: 0; }
+
+  .check-delivery-zone_input {
+    width: 150px;
+    margin-top: 0; }
+
+  .cart_product {
+    flex-direction: column; }
+    .cart_product-main-content {
+      margin-top: 0;
+      display: flex;
+      justify-content: space-between; }
+
+  .cart_exit {
+    padding: 9px 7px;
+    width: 105px;
+    font-size: 11px;
+    height: 36px; }
+
+  .cart_products-footer {
+    margin-top: 15px;
+    margin-bottom: 30px; }
+
+  .buy-block_total-cost {
+    font-size: 13px; }
+
+  .buy-block_sum {
+    font-size: 13px; }
+
+  .buy-block_btn {
+    margin-top: 10px;
+    width: 100px;
+    padding: 0; } }
